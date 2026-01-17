@@ -1,0 +1,69 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #fafafa;
+}
+
+header {
+    background: #7b0000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section {
+    padding: 20px;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.product {
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.gallery img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+button {
+    padding: 10px;
+    background: #7b0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}

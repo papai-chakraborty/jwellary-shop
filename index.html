@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laxmi Narayan Jwellary - Official Website</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+<img src="logo.jpg" width="100%">
+<h1>LAXMI NARAYAN JWELLARY</h1>
+<p>Owner: PAPAI CHAKRABORTY</p>
+<p>Contact: 8391052145</p>
+</header>
+
+<nav>
+<a onclick="show('home')">Home</a>
+<a onclick="show('products')">Products</a>
+<a onclick="show('gallery')">Gallery</a>
+<a onclick="show('user')">User Panel</a>
+<a onclick="show('admin')">Admin Panel</a>
+</nav>
+
+<section id="home" class="active">
+<h2>Welcome to Laxmi Narayan Jwellary</h2>
+<p>We provide best quality gold, silver and diamond jewellery all over India.</p>
+</section>
+
+<section id="products">
+<h2>Product Price Panel (INR)</h2>
+<div class="product">Gold Necklace - ₹45,000</div>
+<div class="product">Diamond Ring - ₹60,000</div>
+<div class="product">Silver Chain - ₹5,000</div>
+<div class="product">Gold Bangles - ₹75,000</div>
+<div class="product">Earrings - ₹12,000</div>
+</section>
+
+<section id="gallery">
+<h2>Product Image Gallery</h2>
+<input type="file" id="imgUpload" multiple>
+<button onclick="upload()">Upload Images</button>
+<div class="gallery" id="galleryBox"></div>
+</section>
+
+<section id="user">
+<h2>User Panel</h2>
+<input placeholder="Username"><br><br>
+<input type="password" placeholder="Password"><br><br>
+<button>Login</button>
+</section>
+
+<section id="admin">
+<h2>Admin Panel</h2>
+<textarea placeholder="Add or Update Product Details" rows="5" cols="40"></textarea><br><br>
+<button>Save Changes</button>
+</section>
+
+<a class="whatsapp" href="https://wa.me/918391052145" target="_blank">
+<button onclick="openWhatsApp()">Order on WhatsApp</button>
+</a>
+
+<footer>
+<p>© 2025 Laxmi Narayan Jwellary - All Rights Reserved</p>
+</footer>
+
+<script>
+function show(id){
+ let sec=document.querySelectorAll('section');
+ sec.forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+
+function upload(){
+ let files=document.getElementById('imgUpload').files;
+ let box=document.getElementById('galleryBox');
+ for(let i=0;i<files.length;i++){
+  let img=document.createElement('img');
+  img.src=URL.createObjectURL(files[i]);
+  box.appendChild(img);
+ }
+}
+</script>
+
+</body>
+</html>
